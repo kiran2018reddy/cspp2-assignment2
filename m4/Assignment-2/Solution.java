@@ -35,14 +35,14 @@ public class Solution {
 		for (c =0 ; c< a ;c=c+1){
 			for (d=0 ; d< b ; d=d+1)
 				sum[c][d] = arr1[c][d]+arr2[c][d];
-			System.out.print("sum of two matrix:");
+			System.out.print("");
 		}
 
 
 		for (c=0; c < a; c = c+1){
 			for (d = 0 ; d < b ; d=d+1)
-				System.out.print(sum[c][d]+"\t");
-			System.out.println();
+				System.out.print(sum[c][d]+" ");
+			System.out.println("");
 		}
 		
 		
