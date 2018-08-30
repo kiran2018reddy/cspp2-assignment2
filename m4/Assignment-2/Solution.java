@@ -1,6 +1,13 @@
 import java.util.*;
+/**
+ * Class for solution.
+ */
 public class Solution {
-	/* Fill the main function to print resultant of addition of matrices*/
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a,b;
@@ -29,9 +36,9 @@ public class Solution {
 
 
 
-		if (a != a1 || b != b1)
+		if (a != a1 || b != b1) {
 			System.out.println("not possible");
-		else{
+		} else {
 			
 
 		//System.out.println("input elements in second matrix");
