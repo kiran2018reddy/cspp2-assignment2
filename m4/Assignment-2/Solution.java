@@ -44,7 +44,7 @@ public class Solution {
 			for (d = 0 ; d < b ; d=d+1){
 				System.out.print(sum[c][d]);
 				if(d <b-1)
-					System.out.println(" ");
+					System.out.print(" ");
 			}
 			System.out.println();
 		}
