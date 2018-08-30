@@ -1,0 +1,152 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+2 2 3
+4 6 6
+7 8 10
+
+Your Output: 
+2 2 3 
+4 6 6 
+7 8 10
+
+----------------------------------------
+########## Testcase 1: Failed ##########
+Expected Output: 
+2 2 1
+4 6 1
+7 8 2
+
+Your Output: 
+2 2 1 
+4 6 1 
+7 8 2
+
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+not possible
+
+Your Output: 
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Unknown Source)
+	at java.base/java.util.Scanner.next(Unknown Source)
+	at java.base/java.util.Scanner.nextInt(Unknown Source)
+	at java.base/java.util.Scanner.nextInt(Unknown Source)
+	at Solution.main(Solution.java:31)
+
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+not possible
+
+Your Output: 
+Exception in thread "main" java.util.NoSuchElementException
+	at java.base/java.util.Scanner.throwFor(Unknown Source)
+	at java.base/java.util.Scanner.next(Unknown Source)
+	at java.base/java.util.Scanner.nextInt(Unknown Source)
+	at java.base/java.util.Scanner.nextInt(Unknown Source)
+	at Solution.main(Solution.java:31)
+
+----------------------------------------
+Result: 0/4 testcases passed.
+Starting audit...
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:1: Using the '.*' form of import should be avoided - java.util.*. [AvoidStarImport]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:3:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:4:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:4:33: Parameter args should be final. [FinalParameters]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:6:23: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:12:27: Array brackets at illegal position. [ArrayTypeStyle]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:12:29: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:13:27: Array brackets at illegal position. [ArrayTypeStyle]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:14:26: Array brackets at illegal position. [ArrayTypeStyle]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:17:23: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:19:27: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:19:35: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:19:39: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:19:40: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:19:41: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:19:42: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:19:44: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:31: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:32: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:34: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:39: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:43: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:44: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:45: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:20:46: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:23: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:23: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:24: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:26: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:27: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:28: '<' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:32: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:33: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:34: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:35: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:29:37: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:31: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:32: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:34: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:35: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:36: '<' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:38: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:39: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:40: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:41: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:30:42: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:33: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:35: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:36: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:25: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:26: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:30: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:33: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:35: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:36: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:37: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:38: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:39: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:37:41: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:31: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:32: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:33: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:37: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:40: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:44: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:45: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:46: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:38:47: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:39:55: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:39:56: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:43:23: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:43:24: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:43:39: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:43:40: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:43:42: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:44: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:44:35: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:44:43: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:44:47: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:44:48: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:44:49: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:44:50: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:45:59: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:45:60: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:48: Line has trailing spaces. [RegexpSingleline]
+[ERROR] C:\Users\reddys\Desktop\cspp2 assignment\cspp2-assignment2\m4\Assignment-2\Solution.java:49: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 92 errors.
+
+
+[master 2080cf3] "check_style_score -> 0 of 4 passed. style score: 0/1 "
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m4/Assignment-2/hello.txt
+
