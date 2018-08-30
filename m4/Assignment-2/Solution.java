@@ -16,30 +16,34 @@ public class Solution {
 
 		int c,d;
 		System.out.println("input elements in first matrix");
-		for (c = 0 ; c < a ; c=c+1)
+		for (c = 0 ; c < a ; c=c+1){
 			for (d=0;d < b ; d=d+1)
 				arr1[c][d] = scan.nextInt();
+		}
 	
 
 
 		System.out.println("input elements in second matrix");
-		for (c=0;c<a; c=c+1)
+		for (c=0;c<a; c=c+1){
 			for (d=0;d<b;d=d+1)
 				arr2[c][d] = scan.nextInt();
+		}
 			
 
 		
-		//sum of matrix
-		for (c =0 ; c< a ;c=c+1)
+		
+		for (c =0 ; c< a ;c=c+1){
 			for (d=0 ; d< b ; d=d+1)
 				sum[c][d] = arr1[c][d]+arr2[c][d];
-			System.out.println("sum of matrix:");
+			System.out.print("sum of two matrix:");
+		}
 
 
-		for (c=0; c < a; c = c+1)
+		for (c=0; c < a; c = c+1){
 			for (d = 0 ; d < b ; d=d+1)
-				System.out.print(sum[c][d]+"\n ");
+				System.out.print(sum[c][d]+"\t");
 			System.out.println();
+		}
 		
 		
 	}
