@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
 	/**
 	 * { function_description }
 	 *
@@ -36,10 +36,10 @@ public class Solution {
 			for (d=0 ; d< b ; d=d+1)
 				sum[c][d] = arr1[c][d]+arr2[c][d];
 		}
-		for (c=0; c < a; c = c+1){
-			for (d = 0 ; d < b ; d=d+1){
+		for (c=0; c < a; c = c + 1){
+			for (d = 0 ; d < b ; d = d+1){
 				System.out.print(sum[c][d]);
-				if(d <b-1)
+				if (d < b-1)
 					System.out.print(" ");
 			}
 			System.out.println();
