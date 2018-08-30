@@ -4,9 +4,9 @@ public class Solution {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		int a,b;
-		System.out.println("input number of rows");
+		//System.out.println("input number of rows");
 		a = scan.nextInt();
-		System.out.println("input number of coloums");
+		//System.out.println("input number of coloums");
 		b = scan.nextInt();
 
 		int arr1[][]= new int[a][b];
@@ -15,7 +15,7 @@ public class Solution {
 
 
 		int c,d;
-		System.out.println("input elements in first matrix");
+		//System.out.println("input elements in first matrix");
 		for (c = 0 ; c < a ; c=c+1){
 			for (d=0;d < b ; d=d+1)
 				arr1[c][d] = scan.nextInt();
@@ -23,7 +23,7 @@ public class Solution {
 	
 
 
-		System.out.println("input elements in second matrix");
+		//System.out.println("input elements in second matrix");
 		for (c=0;c<a; c=c+1){
 			for (d=0;d<b;d=d+1)
 				arr2[c][d] = scan.nextInt();
