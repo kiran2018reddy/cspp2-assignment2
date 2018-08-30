@@ -29,10 +29,10 @@ public class Solution {
 
 
 
-		if (a == a1 && b == b1)
-			System.out.println("possible");
-		else
+		if (a != a1 || b != b1)
 			System.out.println("not possible");
+		else{
+			
 
 		//System.out.println("input elements in second matrix");
 		for (c=0;c<a; c=c+1){
@@ -59,4 +59,5 @@ public class Solution {
 		
 		
 	}
+}
 }
