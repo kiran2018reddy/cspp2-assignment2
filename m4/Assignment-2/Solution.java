@@ -19,7 +19,7 @@ public final class Solution {
         int[][] arr1 = new int[a][b];
         int[][] arr2 = new int[a][b];
         int[][] sum = new int[a][b];
-        int c, d ;//System.out.println("input elements in first matrix");
+        int c, d; //System.out.println("input elements in first matrix");
         for (c = 0; c < a; c = c + 1) {
             for (d = 0; d < b; d = d + 1) {
                 arr1[c][d] = scan.nextInt();
