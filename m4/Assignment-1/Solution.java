@@ -6,6 +6,7 @@ import java.util.Scanner;
  * { item_description }.
  */
 public final class Solution {
+/*
 private Solution() {
 
 }
