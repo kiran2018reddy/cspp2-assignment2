@@ -13,8 +13,8 @@ public final class Solution {
          * main function.
          */
         Scanner scan = new Scanner(System.in);
-        int a,b;//System.out.println("input number of rows");
-        a = scan.nextInt();//System.out.println("input number of coloums");
+        int a, b; //System.out.println("input number of rows");
+        a = scan.nextInt(); //System.out.println("input number of coloums");
         b = scan.nextInt();
         int[][] arr1 = new int[a][b];
         int[][] arr2 = new int[a][b];
