@@ -16,10 +16,10 @@ public final class Solution {
         int a,b;//System.out.println("input number of rows");
         a = scan.nextInt();//System.out.println("input number of coloums");
         b = scan.nextInt();
-        int arr1[][] = new int[a][b];
-        int arr2[][] = new int[a][b];
-        int sum[][] = new int[a][b];
-        int c, d;//System.out.println("input elements in first matrix");
+        int[][] arr1 = new int[a][b];
+        int[][] arr2 = new int[a][b];
+        int[][] sum = new int[a][b];
+        int c, d ;//System.out.println("input elements in first matrix");
         for (c = 0; c < a; c = c + 1) {
             for (d = 0; d < b; d = d + 1) {
                 arr1[c][d] = scan.nextInt();
