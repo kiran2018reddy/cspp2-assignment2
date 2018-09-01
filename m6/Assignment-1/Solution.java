@@ -19,14 +19,14 @@ public final class Solution {
      * @return     { description_of_the_return_value }
      */
         static boolean findprime(final int n) {
-        int count_number = 0;
+        int count = 0;
         for (int i = 2; i <= n / i; i = i + 1) {
             if (n % i == 0) {
-                count_number = count_number + 1;
+                count = count + 1;
                 break;
             }
         }
-        return count_number == 0;
+        return count == 0;
     }
     /**
      * Prints the odd composite numbers between 2 and n.
