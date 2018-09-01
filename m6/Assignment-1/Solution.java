@@ -6,17 +6,27 @@ import java.util.Scanner;
  * @author : 
  */
 public final class Solution {
+    /**
+     * Constructs the object.
+     */
     private Solution() {
     }
+    /**
+     * { function_description }
+     *
+     * @param      n     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
         static boolean findprime(final int n) {
         int count_num = 0;
-        for (int i =2; i<=n/i;i=i+1) {
-            if (n %i==0) {
-                count_num=count_num+1;
+        for (int i = 2; i <= n / i; i = i + 1) {
+            if (n % i == 0) {
+                count_num = count_num + 1;
                 break;
             }
         }
-        return count_num==0;
+        return count_num == 0;
     }
     /**
      * Prints the odd composite numbers between 2 and n.
@@ -25,7 +35,7 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
         for (int i = 2; i <= n; i++) {
-            if (i % 2==1&&!findprime(i)) {
+            if (i % 2 ==  1&& !findprime(i)) {
                 System.out.println(i);
             }
         }
