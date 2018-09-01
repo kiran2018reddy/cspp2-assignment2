@@ -50,3 +50,4 @@ final class Solution {
         System.out.println(Arrays.toString(newCharArray));
     }
 }
+
