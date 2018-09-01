@@ -12,11 +12,11 @@ public final class Solution {
     private Solution() {
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @param      n     { parameter_description }
+     * @param      n     { parameter_description }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
         static boolean findprime(final int n) {
         int count = 0;
