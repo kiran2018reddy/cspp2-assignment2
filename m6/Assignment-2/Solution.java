@@ -26,7 +26,7 @@ final class Solution {
     final int columns) {
         final int k = 100;
         int[][] result = new int[rows][columns];
-         for (int i = 0; i < rows; i++) {
+         for (int i = 0; i < rows; i = i + 1) {
             for (int j = 0; j < columns; j++) {
                 result[i][j] = k * Math.round((float) a[i][j] / k);
             }
