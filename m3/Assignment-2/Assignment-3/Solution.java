@@ -31,9 +31,10 @@ final class Solution {
 
         static void gcd(final int num1, final int num2) {
             int k = 0;
-        for (int i = 1 ; i <= num1 && i <= num2; i = i+ 1) {
-            if(num1 % i == 0 && num2 % i == 0)
+        for (int i = 1 ;i <= num1 && i <= num2;i = i + 1) {
+            if (num1 % i == 0 && num2 % i == 0) {
                 k = i;
+            }
         }
           System.out.println(k);
     }
