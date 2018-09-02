@@ -20,7 +20,7 @@ public final class Solution {
      */
         static boolean findprime(final int n) {
         int count = 0;
-        for (int i = 2; i <= n / i; i = i + 1) {
+        for (int i = 2;i<=n/i; i = i + 1) {
             if (n % i == 0) {
                 count = count + 1;
                 break;
