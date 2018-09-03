@@ -3,11 +3,14 @@
 
 
 import java.util.Scanner;
-public class Solution
-{/*
-	Do not modify this main function.
-	*/
-	protected Solution() { }
+/**
+ * Class for solution.
+ */
+public class Solution{
+	/**
+	 * Constructs the object.
+	 */
+	private Solution() { }
 	/**
 	 * { function_description }.
 	 *
@@ -17,7 +20,7 @@ public class Solution
 	{
 		Scanner sc=new Scanner(System.in);
 		int n= Integer.parseInt(sc.nextLine());
-		for(int i=0;i<=n;i++){
+		for(int i=0;i<=n-1;i++){
 			String s=sc.nextLine();
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
 			System.out.println(res);
