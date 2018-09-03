@@ -16,7 +16,7 @@ public class Solution
 	public static String reverseString(final String s) {
 		String reverse= "";
 		for (int i =0; i< s.length(); i++){
-			reverse = reverse + s.charAt(i);
+			reverse = s.charAt(i) + reverse;
 		}
 
 return reverse;
