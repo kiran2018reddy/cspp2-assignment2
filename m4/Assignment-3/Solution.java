@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution{
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -16,29 +16,28 @@ public class Solution{
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args)
-    {
-        Scanner sc=new Scanner(System.in);
+    public static void main(final String[] args) {
+        Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
-        for(int i = 0;i <= n - 1;i++){
+        for (int i = 0; i <= n - 1; i++) {
             String s = sc.nextLine();
-            String res = binaryToDecimal(s);//Write binaryToDecimal function
+            String res = binaryToDecimal(s); //Write binaryToDecimal function
             System.out.println(res);
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
-     * @param      s     { parameter_description }
+     * @param      s     { parameter_description }.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
 static String binaryToDecimal(final String s) {
     int sum = 0;
     int a = 1;
     int b = s.length() - 1;
-    for (int i = 0;i < s.length();i++){
-        a = (int)Math.pow(2,b);
+    for (int i = 0; i < s.length (); i++) {
+        a = (int) Math.pow (2 , b);
         sum = sum + (a * Character.getNumericValue(s.charAt(i)));
         b = b - 1;
     }
