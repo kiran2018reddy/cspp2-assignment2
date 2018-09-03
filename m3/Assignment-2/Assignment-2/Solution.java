@@ -3,13 +3,13 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
 /**
  * { function_description }.
  *
  * @param      args  The arguments
  */
-    final public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
