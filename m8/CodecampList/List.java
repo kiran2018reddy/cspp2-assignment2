@@ -149,8 +149,9 @@ size =0;
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-       if (index<size)
+       if (index<size){
        return arr[index];
+   }
         return -1;
     }
 
