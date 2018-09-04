@@ -5,6 +5,9 @@ import java.util.Arrays;
 /**
  * List class.
  */
+/**
+ * { item_description }.
+ */
 public final class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -101,6 +104,11 @@ public final class List {
      *
      * The method returns void (nothing).
      */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         array[size++] = item;
@@ -152,12 +160,12 @@ public final class List {
         } else {
             array[index] = array[index + 1];
 
-            for (int i=index+1;i< array.length -1;i++) {
+            for (int i = index + 1; i< array.length -1; i++) {
                 array[i] = array[i + 1];
             }
 
             array[array.length - 1] = 0;
-            size= size -1;
+            size = size -1;
             //System.out.println(Arrays.toString(array));
         }
 
@@ -179,8 +187,7 @@ public final class List {
     public int get(final int index) {
         // Replace the code below to write the code for get
 
-        if (index < size)
-            return array[index];
+        if (index < size) return array[index];
         return -1;
     }
 
@@ -205,6 +212,11 @@ public final class List {
      *
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         int[] temparray = new int[size];
@@ -222,6 +234,13 @@ public final class List {
      * the item exists and otherwise false.
      *
      */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -238,15 +257,27 @@ public final class List {
      * or -1 if this list does not contain the element.
      *
      */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int indexOf(final int item) {
         // Replace the code below
-        for (int i=0; i<size; i++) {
-            if (array[i]==item) {
+        for (int i = 0; i < size; i++) {
+            if (array[i] == item) {
                 return i;
             }
         }
         return -1;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
