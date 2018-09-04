@@ -133,7 +133,7 @@ size =0;
     --size;
 }
      else{
-    System.out.println("invalid position");
+    System.out.println("invalid position Exception");
 }
 }
     /*
@@ -150,7 +150,7 @@ size =0;
     public int get(int index) {
         // Replace the code below to write the code for get
        if (index<size){
-       return arr[index];
+       return arr[index-1];
    }
         return -1;
     }
@@ -196,7 +196,7 @@ size =0;
             return true;
         }
     }
-        return false;
+        return true;
     
     }
 
