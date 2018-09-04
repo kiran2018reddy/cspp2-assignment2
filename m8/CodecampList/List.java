@@ -148,6 +148,11 @@ public final class List {
      * The method returns void (nothing).
      *
      */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -160,12 +165,12 @@ public final class List {
         } else {
             array[index] = array[index + 1];
 
-            for (int i = index + 1; i< array.length -1; i++) {
+            for (int i = index + 1; i< array.length - 1; i++) {
                 array[i] = array[i + 1];
             }
 
             array[array.length - 1] = 0;
-            size = size -1;
+            size = size - 1;
             //System.out.println(Arrays.toString(array));
         }
 
@@ -183,6 +188,13 @@ public final class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      *
+     */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
      */
     public int get(final int index) {
         // Replace the code below to write the code for get
