@@ -165,7 +165,7 @@ public final class List {
         } else {
             array[index] = array[index + 1];
 
-            for (int i = index + 1; i< array.length - 1; i++) {
+            for(int i = index + 1; i< array.length - 1; i++) {
                 array[i] = array[i + 1];
             }
 
@@ -199,7 +199,9 @@ public final class List {
     public int get(final int index) {
         // Replace the code below to write the code for get
 
-        if (index < size) return array[index];
+        if (index < size){
+         return array[index];
+     }
         return -1;
     }
 
