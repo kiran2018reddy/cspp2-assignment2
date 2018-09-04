@@ -10,7 +10,6 @@ final class Solution {
      * Constructs the object.
      */
     private Solution() {
-        //not used
     }
     /**
      * Function to replace each element
