@@ -112,7 +112,10 @@ public class List {
         //Inserts the specified element at the end of the list.
         list[size++] = item;   
     }
-
+       public List(int capacity){
+        list = new int[capacity];
+        size =0;
+}
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
