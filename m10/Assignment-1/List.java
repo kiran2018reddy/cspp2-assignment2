@@ -188,7 +188,7 @@ public class List {
             }
             size--;
         } else {
-            System.out.println("Negative Index Exception");
+            System.out.println("Invalid Position Exception");
         }
     }
 
@@ -281,7 +281,7 @@ public class List {
      */
     public void add(int index,int item) {
          if(index<0){
-            System.out.println("Invalid Position Exception");
+            System.out.println("Negative Index Exception");
             return;
          }
          for (int i = size; i>index;i=i-1){
