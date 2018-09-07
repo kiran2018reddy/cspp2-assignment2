@@ -2,7 +2,7 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 
 public class List {
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -258,9 +258,9 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
-        for(int i = 0; i < size; i++) {
-            if(item == list[i])
+    public int indexOf(final int item) {
+        for (int i = 0; i < size; i++) {
+            if (item == list[i])
                 return i;
         }
         return -1;
@@ -275,7 +275,7 @@ public class List {
 
      /*
         Inserts the specified element at the specified index
-	by moving all the elements to the right.
+    by moving all the elements to the right.
         The method returns void (nothing)
      */
     public void add(final int index, final int item) {
@@ -312,7 +312,7 @@ public class List {
  *
  * @param      args  The arguments
  */
-	public static void main(final String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
@@ -329,11 +329,9 @@ public class List {
                case "add":
                 if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if (t.length == 1){
-                    l.add(Integer.parseInt(tokens[1]));
-                }
+                if (t.length == 1) l.add(Integer.parseInt(tokens[1]));
                 else {
-                    if (t.length > 1){
+                    if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
                     }
@@ -346,7 +344,7 @@ public class List {
                 if (tokens.length == 2) {
                 String[] t1 = tokens[1].split(",");
                 int[] temp = new int[t1.length];
-                for (int i = 0; i < temp.length; i++){
+                for (int i = 0; i < temp.length; i++) {
                     temp[i] = Integer.parseInt(t1[i]);
                 }
                 l.addAll(temp);
@@ -378,5 +376,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
