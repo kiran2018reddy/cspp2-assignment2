@@ -30,6 +30,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+    declaring an int array.
+    **/
     private int[] list;
 
     /*
@@ -55,6 +58,9 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+    declaring an integer.
+    **/
     private int size;
 
     /*
@@ -71,7 +77,7 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        int a = 10;
+        final int a = 10;
         list = new int[a];
 
         // Think about the initial value for size.
@@ -266,8 +272,9 @@ public class List {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (size == 0)
+        if (size == 0) {
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
@@ -388,8 +395,9 @@ public class List {
                case "add":
                 if ((tokens.length) == 2) {
                 String[] t = tokens[1].split(",");
-                if (t.length == 1) l.add(Integer.parseInt(tokens[1]));
-                else {
+                if (t.length == 1) {
+                    l.add(Integer.parseInt(tokens[1]));
+                } else {
                     if (t.length > 1) {
                         l.add(Integer.parseInt(t[0]), Integer.parseInt(t[1]));
                     }
@@ -432,6 +440,8 @@ public class List {
                 break;
                 case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                break;
+                default:
                 break;
             }
         }
