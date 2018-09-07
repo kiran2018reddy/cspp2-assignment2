@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * List of .
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -25,7 +27,6 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-    
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -70,7 +71,6 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        
         int a = 10;
         list = new int[a];
 
@@ -95,6 +95,11 @@ public class List {
      * constructor.
      *
      */
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity.
+     */
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
@@ -107,7 +112,7 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
     /**
@@ -115,7 +120,7 @@ public class List {
      *
      * @param      item  The item.
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         list[size++] = item;
     }
