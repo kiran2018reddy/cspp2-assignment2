@@ -10,14 +10,7 @@ class Set {
         set = new int[ten];
         size = 0;
     }
-
-
-    void add(final int[] item){
-        for (int i = 0; i < item.length; i=i+1){
-            add(item[i]);
-        }
-    }
-void resize(){
+    void resize(){
         set = Arrays.copyOf(set, 2 * size);
     }
     void add(final int item){
@@ -28,8 +21,24 @@ void resize(){
             array[size++] =item;
         }
     }
+
+
+    void add(final int[] item){
+        for (int i = 0; i < item.length; i=i+1){
+            add(item[i]);
+        }
+    }
+
     int size(){
         return size;
+    }
+        boolean contains(final int item) {
+        for (int i = 0; i < size; i=i+1) {
+            if (set[i] == item) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public String toString() {
@@ -45,32 +54,7 @@ void resize(){
 
         return res;
     }
-    boolean contains(final int item) {
-        for (int i = 0; i < size; i=i+1) {
-            if (set[i] == item) {
-                return true;
-            }
-        }
-        return false;
-    }
-int[][] cartesianProduct(final Set item) {
-        if (size == 0 || item.size == 0) {
-            return null;
-        }
-        int[][] res4 = new int[item.size*size][2];
-        int k = 0;
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < item.size; j++) {
-                res4[k][0] = set[i];
-                res4[k][1] = item.set[j];
-                k=k+1;
-            }
-
-        }
-
-        return res4;
-    }
-    Set intersection(final Set item) {
+        Set intersection(final Set item) {
         Set res1 = new Set();
         for (int i = 0; i < size; i=i+1){
             for (int j = 0; j < item.size; j=j+1) {
@@ -94,6 +78,25 @@ int[][] cartesianProduct(final Set item) {
         }
         return res3;
     }
+
+int[][] cartesianProduct(final Set item) {
+        if (size == 0 || item.size == 0) {
+            return null;
+        }
+        int[][] res4 = new int[item.size*size][2];
+        int k = 0;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < item.size; j++) {
+                res4[k][0] = set[i];
+                res4[k][1] = item.set[j];
+                k=k+1;
+            }
+
+        }
+
+        return res4;
+    }
+
 
 
 
