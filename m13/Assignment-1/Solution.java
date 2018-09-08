@@ -35,7 +35,7 @@ class Set {
         return size;
     }
         boolean contains(final int item) {
-        for (int i = 0; i < size; i=i+1) {
+        for (int i = 0; i < size; i = i+1) {
             if (set[i] == item) {
                 return true;
             }
@@ -47,9 +47,9 @@ class Set {
         String res= "{";
         for (int i = 0; i < size; i++) {
             if (i == size - 1) {
-                res = res+set[i];
+                res = res + set[i];
             } else {
-                res = res+set[i] + ", ";
+                res = res + set[i] + ", ";
             }
         }
         res =res + "}";
@@ -58,8 +58,8 @@ class Set {
     }
         Set intersection(final Set item) {
         Set res1 = new Set();
-        for (int i = 0; i < size; i=i+1){
-            for (int j = 0; j < item.size; j=j+1) {
+        for (int i = 0; i < size; i = i+1){
+            for (int j = 0; j < item.size; j = j+1) {
                 if (set[i] == item.set[j]){
                     res1.add(item.set[j]);
                 }
@@ -71,9 +71,9 @@ class Set {
 
     Set retainAll(final int[] item) {
         Set res3 = new Set();
-        for (int i = 0; i <size; i=i+1) {
-            for (int j = 0; j < item.length; j=j+1) {
-                if (set[i]==item[j]){
+        for (int i = 0; i < size; i = i+1) {
+            for (int j = 0; j < item.length; j = j+1) {
+                if (set[i] == item[j]){
                     res3.add(item[j]);
                 }
             }
@@ -85,13 +85,13 @@ int[][] cartesianProduct(final Set item) {
         if (size == 0 || item.size == 0) {
             return null;
         }
-        int[][] res4 = new int[item.size*size][2];
+        int[][] res4 = new int[item.size * size][2];
         int k = 0;
-        for (int i = 0; i < size; i=i+1) {
-            for (int j = 0; j < item.size; j=j+1) {
+        for (int i = 0; i < size; i = i + 1) {
+            for (int j = 0; j < item.size; j = j + 1) {
                 res4[k][0] = set[i];
                 res4[k][1] = item.set[j];
-                k=k+1;
+                k = k + 1;
             }
 
         }
