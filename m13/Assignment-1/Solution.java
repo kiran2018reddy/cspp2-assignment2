@@ -14,7 +14,7 @@ class Set {
 
 
     void add(final int[] item){
-        for (int i = 0; i < item.length; i=i+1){
+        for (int i = 0; i < item.length; i = i+1){
             add(item[i]);
         }
     }
@@ -25,12 +25,13 @@ class Set {
         try {
             if (!contains(item)) {
                 set[size] = item;
-                size++;
+                size = size + 1;
             }
         } catch (Exception e) {
             resize();
         }
     }
+    //add function 
     int size(){
         return size;
     }
@@ -45,7 +46,7 @@ class Set {
 
     public String toString() {
         String res= "{";
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i = i + 1) {
             if (i == size - 1) {
                 res = res + set[i];
             } else {
@@ -56,9 +57,16 @@ class Set {
 
         return res;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }.
+     */
         Set intersection(final Set item) {
         Set res1 = new Set();
-        for (int i = 0; i < size; i = i+1){
+        for (int i = 0; i < size; i = i + 1) {
             for (int j = 0; j < item.size; j = j+1) {
                 if (set[i] == item.set[j]){
                     res1.add(item.set[j]);
@@ -68,19 +76,31 @@ class Set {
         return res1;
 
     }
-
+/**
+ * { function_description }.
+ *
+ * @param      item  The item.
+ *
+ * @return     { description_of_the_return_value }.
+ */
     Set retainAll(final int[] item) {
         Set res3 = new Set();
-        for (int i = 0; i < size; i = i+1) {
+        for (int i = 0; i < size; i = i + 1) {
             for (int j = 0; j < item.length; j = j+1) {
-                if (set[i] == item[j]){
+                if (set[i] == item[j]) {
                     res3.add(item[j]);
                 }
             }
         }
         return res3;
     }
-
+/**
+ * { function_description }.
+ *
+ * @param      item  The item
+ *
+ * @return     { description_of_the_return_value }.
+ */
 int[][] cartesianProduct(final Set item) {
         if (size == 0 || item.size == 0) {
             return null;
