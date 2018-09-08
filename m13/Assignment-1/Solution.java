@@ -13,6 +13,9 @@ class Set {
      * { var_description }.
      */
     private int[] array;
+    /**
+     * { var_description }.
+     */
     private int size;
     /**
      * Constructs the object.
@@ -24,16 +27,20 @@ class Set {
     }
 
 
-
+/**
+ * { function_description }.
+ *
+ * @param      item  The item.
+ */
     void add(final int[] item) {
-        for (int i = 0; i < item.length; i = i+1) {
+        for (int i = 0; i < item.length; i = i + 1) {
             add(item[i]);
         }
     }
     /**
      * { function_description }.
      */
-    void resize(){
+    void resize() {
         set = Arrays.copyOf(set, 2 * size);
     }
     /**
