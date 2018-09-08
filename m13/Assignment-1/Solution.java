@@ -10,6 +10,14 @@ class Set {
         set = new int[ten];
         size = 0;
     }
+
+
+
+    void add(final int[] item){
+        for (int i = 0; i < item.length; i=i+1){
+            add(item[i]);
+        }
+    }
     void resize(){
         set = Arrays.copyOf(set, 2 * size);
     }
@@ -23,14 +31,6 @@ class Set {
             resize();
         }
     }
-
-
-    void add(final int[] item){
-        for (int i = 0; i < item.length; i=i+1){
-            add(item[i]);
-        }
-    }
-
     int size(){
         return size;
     }
