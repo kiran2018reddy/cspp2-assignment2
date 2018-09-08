@@ -13,12 +13,14 @@ class Set {
     void resize(){
         set = Arrays.copyOf(set, 2 * size);
     }
-    void add(final int item){
-        if (size==array.length){
+     void add(final int item) {
+        try {
+            if (!contains(item)) {
+                set[size] = item;
+                size++;
+            }
+        } catch (Exception e) {
             resize();
-        }
-        if (!contains(item)){
-            array[size++] =item;
         }
     }
 
@@ -85,8 +87,8 @@ int[][] cartesianProduct(final Set item) {
         }
         int[][] res4 = new int[item.size*size][2];
         int k = 0;
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < item.size; j++) {
+        for (int i = 0; i < size; i=i+1) {
+            for (int j = 0; j < item.size; j=j+1) {
                 res4[k][0] = set[i];
                 res4[k][1] = item.set[j];
                 k=k+1;
