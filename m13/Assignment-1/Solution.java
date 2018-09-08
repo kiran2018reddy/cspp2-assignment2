@@ -1,10 +1,22 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for set.
+ */
 class Set {
+    /**
+     * { var_description }.
+     */
     private int[] set;
+    /**
+     * { var_description }.
+     */
     private int[] array;
     private int size;
+    /**
+     * Constructs the object.
+     */
     Set() {
         final int ten = 10;
         set = new int[ten];
@@ -13,14 +25,22 @@ class Set {
 
 
 
-    void add(final int[] item){
-        for (int i = 0; i < item.length; i = i+1){
+    void add(final int[] item) {
+        for (int i = 0; i < item.length; i = i+1) {
             add(item[i]);
         }
     }
+    /**
+     * { function_description }.
+     */
     void resize(){
         set = Arrays.copyOf(set, 2 * size);
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     */
      void add(final int item) {
         try {
             if (!contains(item)) {
@@ -31,21 +51,36 @@ class Set {
             resize();
         }
     }
-    //add function 
-    int size(){
+/**
+ * { function_description }.
+ *
+ * @return     { description_of_the_return_value }.
+ */
+    int size() {
         return size;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }.
+     */
         boolean contains(final int item) {
-        for (int i = 0; i < size; i = i+1) {
+        for (int i = 0; i < size; i = i + 1) {
             if (set[i] == item) {
                 return true;
             }
         }
         return false;
     }
-
+/**
+ * Returns a string representation of the object.
+ *
+ * @return     String representation of the object.
+ */
     public String toString() {
-        String res= "{";
+        String res = "{";
         for (int i = 0; i < size; i = i + 1) {
             if (i == size - 1) {
                 res = res + set[i];
@@ -53,7 +88,7 @@ class Set {
                 res = res + set[i] + ", ";
             }
         }
-        res =res + "}";
+        res = res + "}";
 
         return res;
     }
@@ -67,8 +102,8 @@ class Set {
         Set intersection(final Set item) {
         Set res1 = new Set();
         for (int i = 0; i < size; i = i + 1) {
-            for (int j = 0; j < item.size; j = j+1) {
-                if (set[i] == item.set[j]){
+            for (int j = 0; j < item.size; j = j + 1) {
+                if (set[i] == item.set[j]) {
                     res1.add(item.set[j]);
                 }
             }
@@ -86,7 +121,7 @@ class Set {
     Set retainAll(final int[] item) {
         Set res3 = new Set();
         for (int i = 0; i < size; i = i + 1) {
-            for (int j = 0; j < item.length; j = j+1) {
+            for (int j = 0; j < item.length; j = j + 1) {
                 if (set[i] == item[j]) {
                     res3.add(item[j]);
                 }
