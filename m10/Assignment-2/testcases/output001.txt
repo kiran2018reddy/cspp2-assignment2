@@ -1,0 +1,7 @@
+[a1,b2,c3,d4,e5,f6,g7,h9]
+6
+[b2,d4,e5,f6,g7,h9]
+6
+Invalid Position Exception
+Invalid Position Exception
+[b2,d4,e5,g7]
