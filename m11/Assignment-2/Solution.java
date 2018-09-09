@@ -1,51 +1,62 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+//A Class is implemented for Student details
+
 /**
  * Class for student.
  */
 class Student {
     /**
-     * name attribute.
+     * { var_description }.
      */
     private String name;
     /**
      * Constructs the object.
-     * @param      n     { parameter_description }
+     *
+     * @param      names  The name
      */
-    Student(final String n) {
-        name = n;
+    Student(final String names) {
+        //A constructor used to initialize the instance variables
+        this.name = names;
     }
     /**
      * Gets the name.
+     *
      * @return     The name.
      */
     public String getName() {
-        return name;
-    }
-    /**
-     * equals method.
-     * @param      other  The other
-     * @return     { description_of_the_return_value }
-     */
-    @Override
-    public boolean equals(final Object other) {
-        if (!(other instanceof Student)) {
-            return false;
-        }
-        Student that = (Student) other;
-        return this.getName().equals(that.getName());
+        //Getter method which returns the value of instance variable
+        return this.name;
     }
     /**
      * { function_description }.
      *
+     * @param      other  The other
+     *
      * @return     { description_of_the_return_value }
      */
     @Override
+    public boolean equals(final Object other) {
+        //This method is to check if two students names are equal or not
+        if (!(other instanceof Student)) {
+            return false;
+        }
+
+        Student that = (Student) other;
+        return this.getName().equals(that.getName());
+    }
+    @Override
+    /**
+     * { hashCode function }.
+     *
+     * @return     { int type }
+     */
     public int hashCode() {
-        return this.hashCode();
+        return 0;
     }
     /**
      * Returns a string representation of the object.
+     *
      * @return     String representation of the object.
      */
     public String toString() {
@@ -60,13 +71,14 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-
+        //unused.
     }
     /**
      * { function_description }.
+     *
      * @param      stdin  The stdin
      */
-    public static void IntegerMethod (final Scanner stdin) {
+    public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -96,17 +108,20 @@ public final class Solution {
                 break;
             case "indexOf":
                 if (tokens.length == 2) {
-                    System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+                    System.out.println(l.indexOf(
+                                           Integer.parseInt(tokens[1])));
                 }
                 break;
             case "get":
                 if (tokens.length == 2) {
-                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    System.out.println(l.get(
+                                           Integer.parseInt(tokens[1])));
                 }
                 break;
             case "contains":
                 if (tokens.length == 2) {
-                    System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                    System.out.println(l.contains(
+                                           Integer.parseInt(tokens[1])));
                 }
                 break;
             case "addAll":
@@ -135,11 +150,12 @@ public final class Solution {
                 }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
-                    Integer.parseInt(arrstring3[1]));
+                                        Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
                 }
                 break;
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
@@ -158,12 +174,13 @@ public final class Solution {
             }
         }
     }
+
     /**
      * { function_description }.
      *
      * @param      stdin  The stdin
      */
-    public static void DoubleMethod (final Scanner stdin) {
+    public static void executeListDouble(final Scanner stdin) {
         List<Double> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -193,17 +210,20 @@ public final class Solution {
                 break;
             case "indexOf":
                 if (tokens.length == 2) {
-                System.out.println(l.indexOf(Double.parseDouble(tokens[1])));
+                    System.out.println(
+                        l.indexOf(Double.parseDouble(tokens[1])));
                 }
                 break;
             case "get":
                 if (tokens.length == 2) {
-                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    System.out.println(
+                        l.get(Integer.parseInt(tokens[1])));
                 }
                 break;
             case "contains":
                 if (tokens.length == 2) {
-                System.out.println(l.contains(Double.parseDouble(tokens[1])));
+                    System.out.println(
+                        l.contains(Double.parseDouble(tokens[1])));
                 }
                 break;
             case "addAll":
@@ -232,11 +252,12 @@ public final class Solution {
                 }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
-                    Integer.parseInt(arrstring3[1]));
+                                        Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
                 }
                 break;
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
@@ -255,12 +276,13 @@ public final class Solution {
             }
         }
     }
+
     /**
      * { function_description }.
      *
      * @param      stdin  The stdin
      */
-    public static void FloatMethod (final Scanner stdin) {
+    public static void executeListFloat(final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -290,17 +312,20 @@ public final class Solution {
                 break;
             case "indexOf":
                 if (tokens.length == 2) {
-                    System.out.println(l.indexOf(Float.parseFloat(tokens[1])));
+                    System.out.println(
+                        l.indexOf(Float.parseFloat(tokens[1])));
                 }
                 break;
             case "get":
                 if (tokens.length == 2) {
-                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    System.out.println(
+                        l.get(Integer.parseInt(tokens[1])));
                 }
                 break;
             case "contains":
                 if (tokens.length == 2) {
-                    System.out.println(l.contains(Float.parseFloat(tokens[1])));
+                    System.out.println(
+                        l.contains(Float.parseFloat(tokens[1])));
                 }
                 break;
             case "addAll":
@@ -329,11 +354,12 @@ public final class Solution {
                 }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
-                    Integer.parseInt(arrstring3[1]));
+                                        Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
                 }
                 break;
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
@@ -352,11 +378,13 @@ public final class Solution {
             }
         }
     }
+
     /**
      * { function_description }.
+     *
      * @param      stdin  The stdin
      */
-    public static void StringMethod (final Scanner stdin) {
+    public static void executeListString(final Scanner stdin) {
         List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -391,7 +419,8 @@ public final class Solution {
                 break;
             case "get":
                 if (tokens.length == 2) {
-                    System.out.println(l.get(Integer.parseInt(tokens[1])));
+                    System.out.println(l.get(
+                                           Integer.parseInt(tokens[1])));
                 }
                 break;
             case "contains":
@@ -417,11 +446,12 @@ public final class Solution {
                 }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
-                    Integer.parseInt(arrstring3[1]));
+                                        Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
                 }
                 break;
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
@@ -440,11 +470,13 @@ public final class Solution {
             }
         }
     }
+
     /**
      * { function_description }.
+     *
      * @param      stdin  The stdin
      */
-    public static void StudentMethod (final Scanner stdin) {
+    public static void executeListStudent(final Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -513,11 +545,12 @@ public final class Solution {
                 }
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
-                    Integer.parseInt(arrstring3[1]));
+                                        Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
                 }
                 break;
+
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
@@ -536,8 +569,10 @@ public final class Solution {
             }
         }
     }
+
     /**
      * { function_description }.
+     *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
@@ -546,28 +581,35 @@ public final class Solution {
         String objectType = stdin.nextLine();
 
         switch (objectType) {
-        case "S"://This case will be executed for String type list
-            StringMethod(stdin);
+        case "S":
+            //This case will be executed for String type list
+            executeListString(stdin);
             break;
 
-        case "I"://This case will be executed for Integer type list
-            IntegerMethod(stdin);
+        case "I":
+            //This case will be executed for Integer type list
+            executeListInteger(stdin);
             break;
 
-        case "F"://This case will be executed for Float type list
-            FloatMethod(stdin);
+        case "F":
+            //This case will be executed for Float type list
+            executeListFloat(stdin);
             break;
 
-        case "C"://This case will be executed for Character type list
-            StringMethod(stdin);
+        case "C":
+            //This case will be executed for Character type list
+            executeListString(stdin);
             break;
 
-        case "D"://This case will be executed for Double type list
-            DoubleMethod(stdin);
+        case "D":
+            //This case will be executed for Double type list
+            executeListDouble(stdin);
             break;
 
         case "O":
-            StudentMethod(stdin);
+            //This case will be executed for Student type
+            //list i.e to store List of Student Objects
+            executeListStudent(stdin);
             break;
         default:
             break;
