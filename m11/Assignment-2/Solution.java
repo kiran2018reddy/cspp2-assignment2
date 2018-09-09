@@ -66,7 +66,7 @@ public final class Solution {
      * { function_description }.
      * @param      stdin  The stdin
      */
-    public static void Integermethod (final Scanner stdin) {
+    public static void IntegerMethod (final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -163,7 +163,7 @@ public final class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void Doublemethod (final Scanner stdin) {
+    public static void DoubleMethod (final Scanner stdin) {
         List<Double> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -260,7 +260,7 @@ public final class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void Floatmethod (final Scanner stdin) {
+    public static void FloatMethod (final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -356,7 +356,7 @@ public final class Solution {
      * { function_description }.
      * @param      stdin  The stdin
      */
-    public static void Stringmethod (final Scanner stdin) {
+    public static void StringMethod (final Scanner stdin) {
         List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -444,7 +444,7 @@ public final class Solution {
      * { function_description }.
      * @param      stdin  The stdin
      */
-    public static void Studentmethod (final Scanner stdin) {
+    public static void StudentMethod (final Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -547,27 +547,27 @@ public final class Solution {
 
         switch (objectType) {
         case "S"://This case will be executed for String type list
-            Stringmethod(stdin);
+            StringMethod(stdin);
             break;
 
         case "I"://This case will be executed for Integer type list
-            Integermethod(stdin);
+            IntegerMethod(stdin);
             break;
 
         case "F"://This case will be executed for Float type list
-            Floatmethod(stdin);
+            FloatMethod(stdin);
             break;
 
         case "C"://This case will be executed for Character type list
-            Stringmethod(stdin);
+            StringMethod(stdin);
             break;
 
         case "D"://This case will be executed for Double type list
-            Doublemethod(stdin);
+            DoubleMethod(stdin);
             break;
 
         case "O":
-            Studentmethod(stdin);
+            StudentMethod(stdin);
             break;
         default:
             break;
