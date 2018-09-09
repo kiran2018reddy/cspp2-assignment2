@@ -189,7 +189,7 @@ public class StringList implements StringListInterface{
             }
             size=size-1;
         } else {
-            System.out.println("Invalid Position");
+            System.out.println("Invalid Position Exception");
         }
        
     }
