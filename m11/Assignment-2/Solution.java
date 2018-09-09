@@ -66,7 +66,7 @@ public final class Solution {
      * { function_description }.
      * @param      stdin  The stdin
      */
-    public static void Integermethod(final Scanner stdin) {
+    public static void Integermethod (final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -163,7 +163,7 @@ public final class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void Doublemethod(final Scanner stdin) {
+    public static void Doublemethod (final Scanner stdin) {
         List<Double> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -260,7 +260,7 @@ public final class Solution {
      *
      * @param      stdin  The stdin
      */
-    public static void Floatmethod(final Scanner stdin) {
+    public static void Floatmethod (final Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -356,7 +356,7 @@ public final class Solution {
      * { function_description }.
      * @param      stdin  The stdin
      */
-    public static void Stringmethod(final Scanner stdin) {
+    public static void Stringmethod (final Scanner stdin) {
         List<String> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -444,7 +444,7 @@ public final class Solution {
      * { function_description }.
      * @param      stdin  The stdin
      */
-    public static void Studentmethod(final Scanner stdin) {
+    public static void Studentmethod (final Scanner stdin) {
         List<Student> l = new List();
         while (stdin.hasNext()) {
             // read the line
