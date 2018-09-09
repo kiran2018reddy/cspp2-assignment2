@@ -9,8 +9,8 @@ import java.util.Scanner;
      * An array would be good. Right?
      * So, when we do not what we are going to have in the list
      * We need to create a Generic list to store the items
-     * Here E is a type parameter, and it will be replaced with
-        actual type when the object got created.
+     * Here E is a type parameter, and it will be replaced with 
+        actual type when the object got created. 
      */
 public class List<E> {
     private E[] list;
@@ -34,43 +34,40 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
-    public void resize() {
-        //int newlen = 2 * list.length;
-        list = Arrays.copyOf(list, 2 * size);
-    }
-
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
-        try {
-            list[size++] = item;
-            //System.out.println(Arrays.toString(list) + " list");
-        } catch (Exception e) {
-            resize();
+         if (size == list.length){
+            resize(size*2);
         }
+        list[(size++)] = item;
     }
-    /*Inserts all the elements of specified int
+    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
-        for (int i = 0; i < items.length; i++) {
-            try {
-
-                list[size] = items[i];
-                size++;
-
-                //System.out.println(Arrays.toString(list) + " list");
-            } catch (Exception e) {
-                resize();
-                list[size++] = items[i];
-            }
+        int tempLen = items.length;
+        if(size+tempLen >= list.length){
+            resize((size+tempLen) * 2);
+        }
+        for(E item: items){
+            list[size++]=item;
         }
     }
+
+
+    private void resize(int capacity){
+        //int[] newArray = new int[2*size];
+        //java.lang.System.arraycopy(list,0,newArray,0,size);
+        list = Arrays.copyOf(list,2*capacity);
+        //list = newArray;
+
+     }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     *
+     * 
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
@@ -80,7 +77,7 @@ public class List<E> {
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when
+     * Think about what happens when 
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
@@ -96,27 +93,16 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int idex) {
+    public void remove(int index) {
         //Write logic for remove method
-        if (idex >= size || idex < 0) {
-            System.out.println("Invalid Position Exception");
-            return;
-        }
-        E[] arrayCopy = ((E[])new Object[list.length]);
-        for (int i = 0; i < list.length; i++) {
-            arrayCopy[i] = list[i];
-        }
-        int ind = 0;
-        for (int i = 0; i < arrayCopy.length; i++) {
-            if (i != idex) {
-                list[ind] = arrayCopy[i];
-                ind++;
-                //System.out.println(list[ind] + "ind array");
+          if(index >= 0 && index < size) {
+            for(int i = index; i < size - 1; i++) {
+                list[i] = list[i + 1];
             }
-
+            size--;
+        } else {
+            System.out.println("Invalid Position Exception");
         }
-
-        size--;
     }
     /*
      * Get method has to return the items that is
@@ -126,12 +112,15 @@ public class List<E> {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the
+     * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-        //Write logic for get method
-        return list[index];
+         if(index < 0 || index >= size) {
+            return null;
+        } else {
+            return list[index];
+        }
     }
     /*
      * What happens when you print an object using println?
@@ -142,7 +131,7 @@ public class List<E> {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     *
+     * 
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
@@ -154,15 +143,16 @@ public class List<E> {
      *
      */
     public String toString() {
-
-        if (size == 0) {
+       
+       if(size == 0)
             return "[]";
+        String str = "[";
+        int i = 0;
+        for(i = 0; i < size - 1; i++) {
+            str = str + list[i] + ",";
         }
-        E[] printArray = ((E[])new Object[size]);
-        for (int i = 0; i < size; i++) {
-            printArray[i] = list[i];
-        }
-        return Arrays.toString(printArray).replaceAll(" ", "");
+        str = str + list[i] + "]";
+        return str;
     }
     /*
      * Contains return true if the list has
@@ -172,20 +162,20 @@ public class List<E> {
      */
     public boolean contains(E item) {
         //Write logic for contains method
-        for (int i = 0; i < size; i++) {
-            if (item.equals(list[i])) {
-                return true;
-            }
-        }
-        return false;
+      return indexOf(item) !=-1;
     }
     /*
-     * Returns the index of the first occurrence
+     * Returns the index of the first occurrence 
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
     public int indexOf(E item) {
-        //Write logic for indexOf method
+       //Write logic for indexOf method
+         for(int i = 0; i < size; i++) {
+            if(item.equals(list[i]))
+                return i;
+        }
         return -1;
+        
     }
 }
