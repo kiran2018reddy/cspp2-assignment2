@@ -1,0 +1,9 @@
+2
+[D,c,-,+]
+[c,-]
+[-,+]
+Index Out of Bounds Exception
+false
+false
+4
+[D,c,-,+]
