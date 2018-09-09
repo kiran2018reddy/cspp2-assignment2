@@ -3,7 +3,10 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-class Solution {
+final class Solution {
+   /**
+    * Constructs the object.
+    */
     private Solution() { }
 /**
  * { function_description }.
@@ -25,7 +28,7 @@ class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-	                l.add(tokens[1]);
+                    l.add(tokens[1]);
                 break;
                 case "addAll":
                 if (tokens.length == 2) {
@@ -62,5 +65,5 @@ class Solution {
                 break;
             }
         }
-	}
+    }
 }
