@@ -1,96 +1,102 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-/**
- * Class for set.
- */
+
 class Set {
+    //your code goes here...
+    //Good luck :-)
+
     /**
-     * { var_description }.
+     * { int[] set }.
      */
     private int[] set;
     /**
-     * { var_description }.
-     */
-    private int[] array;
-    /**
-     * { var_description }.
+     * { int size }.
      */
     private int size;
+
     /**
-     * Constructs the object.
+     * Constructs the object set.
      */
     Set() {
         final int ten = 10;
         set = new int[ten];
         size = 0;
     }
-
-int[] getSet(){
-return set;
-}
-  void setSet(final int[] sets){
-  	this.set = sets;
-  }
-/**
- * { function_description }.
- *
- * @param      item  The item.
- */
-    void addAll(final int[] item) {
-        for (int i = 0; i < item.length; i = i + 1) {
-            add(item[i]);
-        }
+    /**
+     * Gets the set.
+     *
+     * @return     The set.
+     */
+    int[] getSet() {
+        return set;
     }
     /**
-     * { function_description }.
+     * Sets the set.
+     *
+     * @param      sets  The sets
+     */
+    void setSet(final int[] sets) {
+        this.set = sets;
+    }
+    /**
+     * { resize function}.
      */
     void resize() {
         set = Arrays.copyOf(set, 2 * size);
     }
-    /**
-     * { function_description }.
-     *
-     * @param      item  The item.
-     */
-     void add(final int item) {
-        if (size == set.length) {
+    void add(final int item) {
+        try {
+            if (!contains(item)) {
+                set[size] = item;
+                size++;
+            }
+        } catch (Exception e) {
             resize();
         }
-         if (!(contains(item))) {
-         set[size] = item;
-         size = size + 1;
-        }
- }
+    }
 
-/**
- * { function_description }.
- *
- * @return     { description_of_the_return_value }.
- */
+    /**
+     * { add array }.
+     *
+     * @param      items  array type
+     */
+    void addAll(final int[] items) {
+        for (int i = 0; i < items.length; i++) {
+            add(items[i]);
+        }
+    }
+
+    /**
+     * { size }.
+     *
+     * @return     { int type }
+     */
     int size() {
         return size;
     }
+
     /**
-     * { function_description }.
+     * { contains}.
      *
-     * @param      item  The item.
+     * @param      item  int type
      *
-     * @return     { description_of_the_return_value }.
+     * @return     { boolean type}
      */
-        boolean contains(final int item) {
-        for (int i = 0; i < size; i = i + 1) {
+    boolean contains(final int item) {
+        for (int i = 0; i < size; i++) {
             if (set[i] == item) {
                 return true;
             }
         }
         return false;
     }
-/**
- * Returns a string representation of the object.
- *
- * @return     String representation of the object.
- */
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String res = "{";
         for (int i = 0; i < size; i = i + 1) {
@@ -104,14 +110,15 @@ return set;
 
         return res;
     }
+
     /**
-     * { function_description }.
+     * {intersection}.
      *
-     * @param      item  The item.
+     * @param      items  set type
      *
-     * @return     { description_of_the_return_value }.
+     * @return     { set type }
      */
-        Set intersection(final Set item) {
+     Set intersection(final Set item) {
         Set res1 = new Set();
         for (int i = 0; i < size; i = i + 1) {
             for (int j = 0; j < item.size; j = j + 1) {
@@ -123,13 +130,14 @@ return set;
         return res1;
 
     }
-/**
- * { function_description }.
- *
- * @param      item  The item.
- *
- * @return     { description_of_the_return_value }.
- */
+
+    /**
+     * { retain all }.
+     *
+     * @param      items  array type
+     *
+     * @return     { set type }
+     */
     Set retainAll(final int[] item) {
         Set res3 = new Set();
         for (int i = 0; i < size; i = i + 1) {
@@ -141,25 +149,15 @@ return set;
         }
         return res3;
     }
-int indexof(final int item){
-	for (int i = 0;i<size(); i=i+1){
-		if (item == set[i]){
-			return i;
-		}
-	}
-	return -1;
-}
 
-
-/**
- *
- * { function_description }.
- *
- * @param      item  The item
- *
- * @return     { description_of_the_return_value }.
- */
-int[][] cartesianProduct(final Set item) {
+    /**
+     * { cartesianProduct }.
+     *
+     * @param      items  set type
+     *
+     * @return     { 2d array type }
+     */
+ int[][] cartesianProduct(final Set item) {
         if (size == 0 || item.size == 0) {
             return null;
         }
@@ -169,22 +167,34 @@ int[][] cartesianProduct(final Set item) {
             for (int j = 0; j < item.size; j = j + 1) {
                 res4[k][0] = set[i];
                 res4[k][1] = item.set[j];
- k = k + 1;
+                k = k + 1;
             }
 
         }
+
         return res4;
+    }
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    int indexOf(final int item) {
+        for (int i = 0; i < size(); i++) {
+            if (item == set[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
-}
-
-
-
+/**
+ * Solution class for code-eval.
+ */
 class SortedSet extends Set {
-/**subSet(int fromElement, int toElement) : Returns a view of the portion of this set
-whose elements range from fromElement, inclusive, to toElement, exclusive. If
-fromElement is greater than toElement, then print a message "Invalid Arguments to
-Subset Exception".*/
-    Set subSet(final int fromElement, final int toElement) {
+   Set subSet(final int fromElement, final int toElement) {
         int from = fromElement;
         int to = toElement;
         if (from > to) {
@@ -197,18 +207,22 @@ Subset Exception".*/
             if (contains(from)) {
                 sub.add(from);
             }
-            from = from+1;
+            from = from +1;
         }
 
-       return sub;
+        return sub;
     }
-/** headSet(int toElement) : Returns a view of the portion of this set whose elements
-are strictly less than toElement.*/
 
-
- Set headSet(final int toElement) {
-     Set sub = new Set();
-      for (int i = 0;i < size(); i=i+1) {
+    /**
+     * { function_description }.
+     *
+     * @param      toElement  To element
+     *
+     * @return     { description_of_the_return_value }
+     */
+    Set headSet(final int toElement) {
+        Set sub = new Set();
+        for (int i = 0; i < size(); i++) {
             if (getSet()[i] < toElement) {
                 sub.add(getSet()[i]);
             }
@@ -216,21 +230,24 @@ are strictly less than toElement.*/
         return sub;
     }
 
-/*last() : Returns the last (highest) element currently in this set. If set is Empty, then
-print a message "Set Empty Exception"*/
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
+    int last() {
+        if (size() <= 0) {
+            System.out.println("Set Empty Exception");
+            return -1;
+        }
+        Arrays.sort(getSet(), 0, size());
+        int s = size() - 1;
+        return getSet()[s];
+    }
 
-int last(){
-	if (size() < 1){
-	System.out.println("Set Empty Exception");
-	return -1;
-}
-Arrays.sort(getSet(), 0, size());
-int s= size() - 1;
-return getSet()[s];
-}
 }
 /**
- * Solution class for code-eval.
+ * classs.
  */
 public final class Solution {
     /**
@@ -239,13 +256,6 @@ public final class Solution {
     private Solution() {
 
     }
-    /**
-     * helper function to convert string input to int array.
-     *
-     * @param      s     { string input from test case file }
-     *
-     * @return     { int array from the given string }
-     */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
@@ -285,7 +295,7 @@ public final class Solution {
             case "print":
                 System.out.println(s);
                 break;
-                case "addAll":
+            case "addAll":
             case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
@@ -293,11 +303,8 @@ public final class Solution {
                 } else {
                     s.addAll(intArray);
                 }
-               break;
-           case "last":
-           		System.out.println(s.last());
                 break;
-                 case "subSet":
+            case "subSet":
                 String[] strArray = tokens[1].split(",");
                 intArray = new int[2];
                 intArray[0] = Integer.parseInt(strArray[0]);
@@ -314,19 +321,22 @@ public final class Solution {
                 intArray[0] = Integer.parseInt(strArray1[0]);
                 System.out.println(s.headSet(intArray[0]));
                 break;
+            case "last":
+                System.out.println(s.last());
+                break;
             // case "intersection":
             //     s = new Set();
             //     Set t = new Set();
             //     intArray = intArray(tokens[1]);
-            //     s.add(intArray);
+            //     s.addAll(intArray);
             //     intArray = intArray(tokens[2]);
-            //     t.add(intArray);
+            //     t.addAll(intArray);
             //     System.out.println(s.intersection(t));
             //     break;
             // case "retainAll":
             //     s = new Set();
             //     intArray = intArray(tokens[1]);
-            //     s.add(intArray);
+            //     s.addAll(intArray);
             //     intArray = intArray(tokens[2]);
             //     System.out.println(s.retainAll(intArray));
             //     break;
@@ -334,10 +344,11 @@ public final class Solution {
             //     s = new Set();
             //     t = new Set();
             //     intArray = intArray(tokens[1]);
-            //     s.add(intArray);
+            //     s.addAll(intArray);
             //     intArray = intArray(tokens[2]);
-            //     t.add(intArray);
-            //     System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+            //     t.addAll(intArray);
+            //     System.out.println(Arrays.deepToString
+            //     (s.cartesianProduct(t)));
             //     break;
             default:
                 break;
