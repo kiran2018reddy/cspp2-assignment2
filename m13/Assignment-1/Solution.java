@@ -49,15 +49,15 @@ class Set {
      * @param      item  The item.
      */
      void add(final int item) {
-        try {
-            if (!contains(item)) {
-                set[size] = item;
-                size = size + 1;
-            }
-        } catch (Exception e) {
+        if (size == set.length) {
             resize();
         }
-    }
+         if(!(contains(item))){
+         set[size] = item;
+         size = size + 1;
+        }
+ }
+
 /**
  * { function_description }.
  *
