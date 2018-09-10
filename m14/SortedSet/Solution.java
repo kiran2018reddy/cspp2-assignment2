@@ -1,7 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
 class Set {
     //your code goes here...
     //Good luck :-)
@@ -45,12 +44,19 @@ class Set {
     void resize() {
         set = Arrays.copyOf(set, 2 * size);
     }
+
+    /**
+     * { add }.
+     *
+     * @param      item  int type
+     */
     void add(final int item) {
         try {
             if (!contains(item)) {
                 set[size] = item;
                 size++;
             }
+            
         } catch (Exception e) {
             resize();
         }
@@ -118,7 +124,7 @@ class Set {
      *
      * @return     { set type }
      */
-     Set intersection(final Set item) {
+          Set intersection(final Set item) {
         Set res1 = new Set();
         for (int i = 0; i < size; i = i + 1) {
             for (int j = 0; j < item.size; j = j + 1) {
@@ -138,16 +144,16 @@ class Set {
      *
      * @return     { set type }
      */
-    Set retainAll(final int[] item) {
-        Set res3 = new Set();
-        for (int i = 0; i < size; i = i + 1) {
-            for (int j = 0; j < item.length; j = j + 1) {
-                if (set[i] == item[j]) {
-                    res3.add(item[j]);
+    Set retainAll(final int[] items) {
+        Set retainSet = new Set();
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < items.length; j++) {
+                if (set[i] == items[j]) {
+                    retainSet.add(items[j]);
                 }
             }
         }
-        return res3;
+        return retainSet;
     }
 
     /**
@@ -174,6 +180,7 @@ class Set {
 
         return res4;
     }
+    
     /**
      * Searches for the first match.
      *
@@ -189,27 +196,46 @@ class Set {
         }
         return -1;
     }
+
+
+
 }
 /**
  * Solution class for code-eval.
  */
 class SortedSet extends Set {
-   Set subSet(final int fromElement, final int toElement) {
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        Arrays.sort(getSet(), 0, size());
+        return super.toString();
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      fromElement  The from element
+     * @param      toElement    To element
+     *
+     * @return     { description_of_the_return_value }
+     */
+    Set subSet(final int fromElement, final int toElement) {
         int from = fromElement;
         int to = toElement;
-        if (from > to) {
+        if (to < from) {
             System.out.println("Invalid Arguments to Subset Exception");
             return null;
         }
         Set sub = new Set();
 
-        while (to > from) {
+        while (from < to) {
             if (contains(from)) {
                 sub.add(from);
             }
-            from = from +1;
+            from = from + 1;
         }
-
         return sub;
     }
 
@@ -256,6 +282,13 @@ public final class Solution {
     private Solution() {
 
     }
+    /**
+     * helper function to convert string input to int array.
+     *
+     * @param      s     { string input from test case file }
+     *
+     * @return     { int array from the given string }
+     */
     public static int[] intArray(final String s) {
         String input = s;
         if (input.equals("[]")) {
@@ -324,32 +357,6 @@ public final class Solution {
             case "last":
                 System.out.println(s.last());
                 break;
-            // case "intersection":
-            //     s = new Set();
-            //     Set t = new Set();
-            //     intArray = intArray(tokens[1]);
-            //     s.addAll(intArray);
-            //     intArray = intArray(tokens[2]);
-            //     t.addAll(intArray);
-            //     System.out.println(s.intersection(t));
-            //     break;
-            // case "retainAll":
-            //     s = new Set();
-            //     intArray = intArray(tokens[1]);
-            //     s.addAll(intArray);
-            //     intArray = intArray(tokens[2]);
-            //     System.out.println(s.retainAll(intArray));
-            //     break;
-            // case "cartesianProduct":
-            //     s = new Set();
-            //     t = new Set();
-            //     intArray = intArray(tokens[1]);
-            //     s.addAll(intArray);
-            //     intArray = intArray(tokens[2]);
-            //     t.addAll(intArray);
-            //     System.out.println(Arrays.deepToString
-            //     (s.cartesianProduct(t)));
-            //     break;
             default:
                 break;
             }
