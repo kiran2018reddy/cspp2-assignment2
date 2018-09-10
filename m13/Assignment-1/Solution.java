@@ -52,7 +52,7 @@ class Set {
         if (size == set.length) {
             resize();
         }
-         if(!(contains(item))){
+         if (!(contains(item))) {
          set[size] = item;
          size = size + 1;
         }
