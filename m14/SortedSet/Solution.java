@@ -58,7 +58,7 @@ class Set {
             if (!contains(item)) {
                 set[size] = item;
                 size++;
-            }     
+            }
         } catch (Exception e) {
             resize();
         }
