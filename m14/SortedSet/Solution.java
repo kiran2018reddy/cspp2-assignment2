@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+/**
+ * Class for set.
+ */
 class Set {
     //your code goes here...
     //Good luck :-)
@@ -55,8 +58,7 @@ class Set {
             if (!contains(item)) {
                 set[size] = item;
                 size++;
-            }
-            
+            }     
         } catch (Exception e) {
             resize();
         }
@@ -118,11 +120,11 @@ class Set {
     }
 
     /**
-     * {intersection}.
+     * { function_description }.
      *
-     * @param      items  set type
+     * @param      item  The item.
      *
-     * @return     { set type }
+     * @return     { description_of_the_return_value }.
      */
           Set intersection(final Set item) {
         Set res1 = new Set();
@@ -163,6 +165,13 @@ class Set {
      *
      * @return     { 2d array type }
      */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     *
+     * @return     { description_of_the_return_value }.
+     */
  int[][] cartesianProduct(final Set item) {
         if (size == 0 || item.size == 0) {
             return null;
@@ -180,7 +189,6 @@ class Set {
 
         return res4;
     }
-    
     /**
      * Searches for the first match.
      *
