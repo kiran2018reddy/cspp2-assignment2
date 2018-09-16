@@ -10,7 +10,11 @@ import java.util.Scanner;
      * Here E is a type parameter, and it will be replaced with
         actual type when the object got created.
      */
-
+        /**
+         * List of .
+         *
+         * @param      <E>   { parameter_description }.
+         */
 class List<E> {
     /**
      * { var_description }.
@@ -58,6 +62,11 @@ class List<E> {
     public void resize() {
      list = Arrays.copyOf(list, 2 * size);
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item.
+     */
 public void add(final E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
@@ -138,8 +147,14 @@ public void add(final E item) {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-
-   public E get(final int index) {
+/**
+ * { function_description }.
+ *
+ * @param      index  The index.
+ *
+ * @return     { description_of_the_return_value }.
+ */
+public E get(final int index) {
         //Write logic for get method
         return list[index];
     }
@@ -246,7 +261,11 @@ public void add(final E item) {
         }
         return c;
     }
-
+    /**
+     * Removes all.
+     *
+     * @param      items  The items.
+     */
  public void removeAll(final E[] items) {
         // // write the logic
        for (int i = 0; i < items.length; i++) {
@@ -263,7 +282,14 @@ public void add(final E item) {
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
-
+     /**
+      * { function_description }.
+      *
+      * @param      start  The start.
+      * @param      end    The end.
+      *
+      * @return     { description_of_the_return_value }.
+      */
     public List subList(final int start, final int end) {
         try {
             if (start < 0 || end > size + 1 || !(start < end)) {
@@ -279,6 +305,13 @@ public void add(final E item) {
         }
         return sublist;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      li    { parameter_description }.
+     *
+     * @return     { description_of_the_return_value }.
+     */
    public boolean equals(final List<E> li) {
 
         if (Arrays.equals(list, li.list)) {
@@ -286,6 +319,11 @@ public void add(final E item) {
         }
         return false;
     }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }.
+     */
       public int equals() {
         return 0;
 
@@ -310,6 +348,11 @@ final class Solution {
     private Solution() {
         //unused.
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments.
+     */
   public static void main(final String[] args) {
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
