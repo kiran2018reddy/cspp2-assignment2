@@ -1,29 +1,30 @@
-import java.io.BufferedInputStream;
-import java.util.Scanner;
-import java.util.*;
-class Show {
-	String movieName;
-	String dateTime;
+/**
+ * Class for show.
+ */
+public class Show {
+	String moviename;
+	String dateandTime;
 	String[] seats;
-	String seatString;
-	Show(String movieName, String dateTime, String seats) {
-		this.movieName = movieName;
-		this.dateTime = dateTime;
-		seats = seats.replace("[", "");
-		seats = seats.replace("]", "");
-		this.seats = seats.split(",");
-		}
-	String getSeats() {
-		seatString = "[";
-		for (int i = 0; i < seats.length; i++) {
-			if (i == seats.length - 1) {
-				seatString += seats[i];
-			} else {
-				seatString += seats[i] + ",";
-			}
-		}
-		seatString += "]";
-		return seatString;
+	Patron[] booked;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      argmoviename    The argmoviename
+	 * @param      argdateandTime  The argdateand time
+	 * @param      argseats        The argseats
+	 */
+	Show(final String argmoviename, final String argdateandTime, final String[] argseats) {
+		moviename = argmoviename;
+		dateandTime = argdateandTime;
+		seats = argseats;
+		booked = new Patron[argseats.length];
 	}
-
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
+	public String toString() {
+		return moviename + "," + dateandTime;
+	}
 }
