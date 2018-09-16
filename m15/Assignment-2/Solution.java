@@ -5,10 +5,9 @@ import java.util.Arrays;
  * Class for set.
  */
 class Set {
-    //your code goes here...
-    //Good luck :-)
-    ////**
-    //
+    /**
+     * { var_description }.
+     */
     private int[] set;
     /**
      * { int size }.
