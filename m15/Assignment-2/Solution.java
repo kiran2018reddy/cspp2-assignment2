@@ -1,10 +1,14 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
+/**
+ * Class for set.
+ */
 class Set {
     //your code goes here...
     //Good luck :-)
+    ////**
+    //
     private int[] set;
     /**
      * { int size }.
@@ -19,7 +23,11 @@ class Set {
         set = new int[ten];
         size = 0;
     }
- 
+ /**
+  * Gets the set.
+  *
+  * @return     The set.
+  */
     int[] getSet() {
         return set;
     }
