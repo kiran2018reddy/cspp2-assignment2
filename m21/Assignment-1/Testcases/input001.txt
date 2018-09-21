@@ -1,0 +1,16 @@
+Food Dosa,2,18/9/2018,8:30AM
+Water 1250,18/9/2018,8:40PM
+PhysicalActivity walking,brisk,18/9/2018,7:00AM,7:30AM
+Weight 18/9/2018,6:30AM,61KG,20%
+Sleep 18/9/2018,10:30PM,6:30PM
+Foodlog
+Waterlog
+PhysicalActivitylog
+Weightlog
+Sleeplog
+Summary
+
+
+
+
+
