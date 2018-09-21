@@ -1,0 +1,7 @@
+Bryant: [Olive, Ollie, Freda, Mercedes], Debra: [Walter, Levi, Jennie, Robin], Freda: [Olive, John, Debra], Jennie: [Levi, John, Freda, Robin], John: [Bryant, Debra, Walter], Levi: [Ollie, John, Walter], Mercedes: [Walter, Robin, Bryant], Olive: [John, Ollie], Ollie: [Mercedes, Freda, Bryant], Robin: [Ollie], Walter: [John, Levi, Bryant]
+Bryant: [Olive, Ollie, Freda, Mercedes], Debra: [Walter, Levi, Jennie, Robin], Freda: [Olive, John, Debra], Jennie: [Levi, John, Freda, Robin], John: [Bryant, Debra, Walter], Levi: [Ollie, John, Walter], Mercedes: [Walter, Robin, Bryant, John], Olive: [John, Ollie], Ollie: [Mercedes, Freda, Bryant], Robin: [Ollie], Walter: [John, Levi, Bryant]
+[Walter, Levi, Jennie, Robin]
+Not a user in Network
+Bryant: [Olive, Ollie, Freda, Mercedes], Debra: [Walter, Levi, Jennie, Robin], Freda: [Olive, John, Debra], Jennie: [Levi, John, Freda, Robin], John: [Bryant, Debra, Walter], Levi: [Ollie, John, Walter], Mercedes: [Walter, Robin, Bryant, John], Olive: [John, Ollie], Ollie: [Mercedes, Freda, Bryant, Debra], Robin: [Ollie], Walter: [John, Levi, Bryant]
+[Bryant, Debra]
+[Olive, John, Debra]

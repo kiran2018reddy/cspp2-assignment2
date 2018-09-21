@@ -1,0 +1,21 @@
+Create 11
+John is connected to Bryant, Debra, Walter.
+Bryant is connected to Olive, Ollie, Freda, Mercedes.
+Mercedes is connected to Walter, Robin, Bryant.
+Olive is connected to John, Ollie.
+Debra is connected to Walter, Levi, Jennie, Robin.
+Walter is connected to John, Levi, Bryant.
+Levi is connected to Ollie, John, Walter.
+Ollie is connected to Mercedes, Freda, Bryant.
+Jennie is connected to Levi, John, Freda, Robin.
+Robin is connected to Ollie.
+Freda is connected to Olive, John, Debra.
+Network
+addConnections Mercedes John
+Network
+addConnections Ollie Debra
+getConnections Debra
+getConnections Ramya
+Network
+CommonConnections John Ollie
+getConnections Freda

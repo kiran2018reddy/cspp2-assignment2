@@ -1,0 +1,8 @@
+Bryant: [Olive, Ollie, Freda, Mercedes], John: [Bryant, Debra, Walter], Mercedes: [Walter, Robin, Bryant], Olive: [John, Ollie]
+[]
+Bryant: [Olive, Ollie, Freda, Mercedes], John: [Bryant, Debra, Walter], Mercedes: [Walter, Robin, Bryant], Olive: [John, Ollie]
+Not a user in Network
+Not a user in Network
+Bryant: [Olive, Ollie, Freda, Mercedes], John: [Bryant, Debra, Walter], Mercedes: [Walter, Robin, Bryant], Olive: [John, Ollie]
+[Walter, Bryant]
+Bryant: [Olive, Ollie, Freda, Mercedes], John: [Bryant, Debra, Walter], Mercedes: [Walter, Robin, Bryant], Olive: [John, Ollie]
