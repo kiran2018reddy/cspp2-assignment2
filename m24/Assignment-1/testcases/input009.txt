@@ -1,0 +1,11 @@
+add-task,task-j1,john,30,y,n,todo
+add-task,task-j6,john,130,y,n,todo
+add-task,task-j2,john,10,y,n,todo
+add-task,task-ta,tom,120,y,n,todo
+add-task,task-jb,john,30,y,n,todo
+add-task,task-jc,john,10,y,n,todo
+add-task,task-jc,john,10,y,n,todo
+add-task,task-tp,tom,120,y,n,todo
+add-task,task-th,tom,27,y,n,todo
+get-next,john
+get-next,tom
