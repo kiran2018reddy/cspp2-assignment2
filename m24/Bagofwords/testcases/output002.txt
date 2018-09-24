@@ -1,0 +1,6 @@
+      		File1.txt	File2.txt	File3.txt	File4.txt	
+File1.txt	100		67		68		0		
+File2.txt	67		100		76		0		
+File3.txt	68		76		100		0		
+File4.txt	0		0		0		0		
+Maximum similarity is between File2.txt and File3.txt
