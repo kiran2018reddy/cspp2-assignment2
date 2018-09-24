@@ -1,2 +1,0 @@
-task-j1, john, 30, Important, Not Urgent, todo
-task-ta, tom, 120, Important, Not Urgent, todo
